@@ -1,4 +1,4 @@
-# Installable Metadata Template
+# eStart NPC Post-Install Add-On
 An add-on to eStart-NPC orgs. Adds Person Accounts and Account Contact Relationship functionality.
 
 ## Deploy

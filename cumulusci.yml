@@ -1,0 +1,11 @@
+minimum_cumulusci_version: '3.88.0'
+project:
+    name: eStart-NPC-Post-Install-Add-On
+    package:
+        name: eStart-NPC-Post-Install-Add-On
+        api_version: '60.0'
+    dependencies:
+        - github: 'https://github.com/EncludeLtd/eStart-NPC'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
