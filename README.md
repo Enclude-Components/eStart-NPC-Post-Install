@@ -7,6 +7,8 @@ An add-on to eStart-NPC orgs. Adds Person Accounts and Account Contact Relations
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
 
+***After deploying, you will need to activate the General Person Account record type for all active profiles***
+
 ## Contents
 
 - Flows
