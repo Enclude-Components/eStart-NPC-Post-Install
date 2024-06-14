@@ -218,9 +218,9 @@
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Call_Opt_In__pc</leftValueReference>
-                <operator>IsChanged</operator>
+                <operator>NotEqualTo</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <elementReference>$Record__Prior.Call_Opt_In__pc</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -268,9 +268,9 @@
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.PersonDoNotCall</leftValueReference>
-                <operator>IsChanged</operator>
+                <operator>NotEqualTo</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <elementReference>$Record__Prior.PersonDoNotCall</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -392,9 +392,9 @@
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Email_Opt_In__pc</leftValueReference>
-                <operator>IsChanged</operator>
+                <operator>NotEqualTo</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <elementReference>$Record__Prior.Email_Opt_In__pc</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -439,9 +439,9 @@
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.PersonHasOptedOutOfEmail</leftValueReference>
-                <operator>IsChanged</operator>
+                <operator>NotEqualTo</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <elementReference>$Record__Prior.PersonHasOptedOutOfEmail</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -504,42 +504,15 @@
         <connector>
             <targetReference>Communication_Preferences_Contradict</targetReference>
         </connector>
-        <filterLogic>1 AND (2 OR 3 OR 4 OR 5)</filterLogic>
-        <filters>
-            <field>IsPersonAccount</field>
-            <operator>EqualTo</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Call_Opt_In__pc</field>
-            <operator>IsChanged</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
-        <filters>
-            <field>PersonDoNotCall</field>
-            <operator>IsChanged</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Email_Opt_In__pc</field>
-            <operator>IsChanged</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
-        <filters>
-            <field>PersonHasOptedOutOfEmail</field>
-            <operator>IsChanged</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
+        <filterFormula>{!$Record.IsPersonAccount}
+&amp;&amp;
+(
+   ISNEW() ||
+   {!$Record.Call_Opt_In__pc} != {!$Record__Prior.Call_Opt_In__pc} ||
+   {!$Record.PersonDoNotCall} != {!$Record__Prior.PersonDoNotCall} ||
+   {!$Record.Email_Opt_In__pc} != {!$Record__Prior.Email_Opt_In__pc} ||
+   {!$Record.PersonHasOptedOutOfEmail} != {!$Record__Prior.PersonHasOptedOutOfEmail}
+)</filterFormula>
         <object>Account</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordBeforeSave</triggerType>

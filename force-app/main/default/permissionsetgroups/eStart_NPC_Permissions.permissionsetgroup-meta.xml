@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Contains various permission sets related to eStart functionality in NPC orgs.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>eStart NPC Permissions</label>
+    <mutingPermissionSets>eStart_NPC_Permissions_Muted</mutingPermissionSets>
+    <permissionSets>eStart_AccountContactRelationships</permissionSets>
+    <permissionSets>eStart_App</permissionSets>
+    <permissionSets>eStart_PersonAccounts</permissionSets>
+    <permissionSets>eStart_Standard_User_Permissions</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>
