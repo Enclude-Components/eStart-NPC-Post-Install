@@ -31,6 +31,8 @@ An add-on to eStart-NPC orgs. Adds Person Accounts and Account Contact Relations
     - eStart Compact Person Account Layout
   - Record Types
     - Person Account
+- Permission Set Groups
+  - eStart NPC Permissions
 - Permission Sets
   - eStart Account Contact Relationships
   - eStart Person Accounts
