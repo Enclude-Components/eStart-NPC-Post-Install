@@ -1,5 +1,5 @@
 # eStart NPC Post-Install Add-On
-An add-on to eStart-NPC orgs. Adds Person Accounts and Account Contact Relationship functionality.
+An add-on to eStart-NPC orgs. Adds Person Account functionality.
 
 ## Deploy
 <a href="https://githubsfdeploy.herokuapp.com?owner=Enclude-Components&repo=eStart-NPC-Post-Install&ref=main">
@@ -16,7 +16,6 @@ An add-on to eStart-NPC orgs. Adds Person Accounts and Account Contact Relations
   - PersonAccount OnCreateUpdate CommunicationPreferences
 - Layouts
   - Account - eStart Default Account Layout
-  - AccountContactRelation - eStart ACR Page Layout
   - PersonAccount - eStart Person Account Layout
 - Account
   - List Views
@@ -36,8 +35,6 @@ An add-on to eStart-NPC orgs. Adds Person Accounts and Account Contact Relations
 - Permission Set Groups
   - eStart NPC Permissions
 - Permission Sets
-  - eStart Account Contact Relationships
   - eStart Person Accounts
 - Standard Value Sets
-  - AccountContactMultiRoles (ACR Roles)
   - LeadSource (Account / Contact Lead Source)
