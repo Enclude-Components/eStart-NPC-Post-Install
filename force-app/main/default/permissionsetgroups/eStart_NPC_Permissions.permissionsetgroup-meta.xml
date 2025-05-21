@@ -4,7 +4,6 @@
     <hasActivationRequired>false</hasActivationRequired>
     <label>eStart NPC Permissions</label>
     <mutingPermissionSets>eStart_NPC_Permissions_Muted</mutingPermissionSets>
-    <permissionSets>eStart_AccountContactRelationships</permissionSets>
     <permissionSets>eStart_App</permissionSets>
     <permissionSets>eStart_PersonAccounts</permissionSets>
     <permissionSets>eStart_Standard_User_Permissions</permissionSets>
